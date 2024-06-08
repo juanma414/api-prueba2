@@ -1,0 +1,40 @@
+### obtener todos los caracteres
+GET http://localhost:3000/api/characters
+
+### obtener un personaje por id
+GET http://localhost:3000/api/characters/e72ad2b3-6fdd-4159-8719-4a0266451d76
+###crear un personaje
+POST http://localhost:3000/api/characters
+Content-Type: application/json
+
+{
+    "name": "Frodo",
+    "characterClass": "Hobbit",
+    "level": 1,
+    "hp": 10,
+    "mana": 10,
+    "attack": 5,
+    "items": ["Sting", "Mithril shirt"]
+}
+
+###modificar un personaje
+PUT  http://localhost:3000/api/characters/11c9d51b-2997-4920-941d-2f857d045028
+Content-Type: application/json
+
+{
+     "name": "Frodo",
+    "characterClass": "Hobbit",
+    "level": 3,
+    "hp": 10,
+    "mana": 10,
+    "attack": 5,
+    "items": [
+      "Sting",
+      "Mithril shirt"
+    ],
+    "id": "11c9d51b-2997-4920-941d-2f857d045028"
+}
+
+### borrar un character
+
+DELETE http://localhost:3000/api/characters/c8718fc31-17bd-4fc5-b823-cd70b9f41f3c
